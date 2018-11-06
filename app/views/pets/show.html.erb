@@ -1,0 +1,120 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PetApp</title>
+    <style>
+    .contorno{
+        border:solid 30px grey; 
+        width:600px;
+        height:700px;
+        border-radius:20px;
+        color :white;
+        background:black;
+        margin:auto;
+        max-height:700px;
+    }
+    h1{
+        text-align:center;
+        border:solid 2px white;
+        width:590px;
+        margin:auto;
+        margin-top:10px;    
+        padding-top:5px;
+    margin-bottom:5px;
+    }
+    .huella{
+        border-radius:80px;
+    }
+    .seccion{
+        background:grey;
+       width:600px;
+       color:white;
+       height:50px;
+       margin-top:165px;
+    }
+   
+    #sube{
+        color:white;
+        background:red;
+        width:130px;
+        padding:3px;
+        border-radius:10px;
+        font-size:30px;
+        margin-left:10px;
+    
+    }
+     #derecha{
+        color:white;
+        background:green;
+        width:130px;
+        padding:3px;
+        border-radius:10px;
+        font-size:30px;
+        margin-left:10px;
+    
+    }
+     #abajo{
+        color:white;
+        background:blue;
+        width:130px;
+        padding:3px;
+        border-radius:10px;
+        font-size:30px;
+        margin-left:10px;
+    
+    }
+     #izq{
+        color:white;
+        background:grey;
+        width:130px;
+        padding:3px;
+        border-radius:10px;
+        font-size:30px;
+        margin-left:10px;
+        margin-top:10px;
+    }
+
+    h2{
+        color :white;
+        margin-top:10px;
+                }
+    ul{
+        margin-top:50px;   
+           
+    </style>
+  </head>
+  <body>
+    <div class ="contorno">   
+      <h1><%=image_tag "huellas.jpg" ,width:"80px",class:"huella" %> Welcome a the App Pets <%=image_tag "huellas.jpg" ,width:"80px", class:"huella" %> </h1>
+      <h2>Hello is the pet number :<%= @pet.id %></h2> 
+      <ul>
+      <li><h2> Hi my name is:<%= @pet.name %> </h2> </li> 
+      <li><h2>  My type is:<%= @pet.type_pet %> </h2></li>
+      <li><h2>  My breed is:<%= @pet.breed %> </h2></li>
+      <li><h2>  My color is:<%= @pet.color %> </h2></li>
+      <li><h2>  My size is:<%= @pet.size%> </h2></li>
+  </ul>        
+        <div class="botones">
+            <button  id="sube"><%=link_to "Home","/",color:"white" %></button>
+            
+            <button  id="izq"><%=link_to "Edit","/pets/#{@pet.id}/edit",color:"white" %></button>
+        </div>
+        <div class="seccion">
+            <div class="home">
+        
+             </div>
+        </div>
+        
+    </div>
+  
+
+  </body>
+</html>
+

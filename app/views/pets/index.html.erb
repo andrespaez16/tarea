@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PetApp</title>
+    <style>
+    .contorno{
+        border:solid 30px grey; 
+        width:600px;
+        height:700px;
+        border-radius:20px;
+        color :white;
+        background:black;
+        margin:auto;
+    }
+    h1{
+        text-align:center;
+        border:solid 2px white;
+        width:590px;
+        margin:auto;
+        margin-top:10px;    
+        padding-top:5px;
+         margin-bottom:5px;
+    }
+    .huella{
+        border-radius:80px;
+    }
+   
+   
+h2{
+    text-align:center;
+       
+        width:590px;
+        margin:auto;
+        margin-top:10px;    
+        padding-top:5px;
+         margin-bottom:5px;
+    }
+
+     #sube{
+        color:white;
+        background:red;
+        width:130px;
+        padding:3px;
+        border-radius:10px;
+        font-size:30px;
+        margin-left:10px;
+    
+    }
+
+    </style>
+    </head>
+    <div class ="contorno">   
+        <h1><%=image_tag "huellas.jpg" ,width:"80px",class:"huella" %> Welcome a the App Pets <%=image_tag "huellas.jpg" ,width:"80px", class:"huella" %> </h1>
+        <h2>List of Pets we have:</h2>  
+<ul> 
+<% @pets.each do |pet| %>
+
+  <li><%= link_to pet.name, "pets/#{pet.id}" %></li>
+<% end %>
+</ul>
+     
+
+       
+<button  id="sube"><%=link_to "Home","/",color:"white" %></button>   
+    </div>
+
+
+  <body>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

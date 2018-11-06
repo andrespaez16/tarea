@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PetApp</title>
+    <style>
+    .contorno{
+        border:solid 30px grey; 
+        width:600px;
+        height:700px;
+        border-radius:20px;
+        color :white;
+        background:black;
+        margin:auto;
+        max-height:700px;
+    }
+    h1{
+        text-align:center;
+        border:solid 2px white;
+        width:590px;
+        margin:auto;
+        margin-top:10px;    
+        padding-top:5px;
+    margin-bottom:5px;
+    }
+    .huella{
+        border-radius:80px;
+    }
+    .seccion{
+        background:grey;
+       width:600px;
+       color:white;
+       height:30px;
+       margin-top:60px;
+    }
+   
+    #sube{
+        color:white;
+        background:red;
+        width:130px;
+        padding:3px;
+        border-radius:10px;
+        font-size:30px;
+        margin-left:10px;
+    
+    }
+     #derecha{
+        color:white;
+        background:green;
+        width:130px;
+        padding:3px;
+        border-radius:10px;
+        font-size:30px;
+        margin-left:10px;
+    
+    }
+     #abajo{
+        color:white;
+        background:blue;
+        width:130px;
+        padding:3px;
+        border-radius:10px;
+        font-size:30px;
+        margin-left:10px;
+    
+    }
+     #izq{
+        color:white;
+        background:grey;
+        width:130px;
+        padding:3px;
+        border-radius:10px;
+        font-size:30px;
+        margin-left:10px;
+        margin-top:10px;
+    }
+    h2{
+        color :white;
+        margin-top:10px;
+                }
+    ul{
+        margin-top:20px;   
+           
+    </style>
+  </head>
+  <body>
+    <div class ="contorno">   
+      <h1><%=image_tag "huellas.jpg" ,width:"80px",class:"huella" %> Welcome a the App Pets <%=image_tag "huellas.jpg" ,width:"80px", class:"huella" %> </h1>
+      <h2>Create Pet:</h2>
+
+      <%= form_tag pets_path, method: "post" do %>
+        <ul>
+        <li><h2>Name :</h2><%= text_field :pet, :name %> </li>
+        <li><h2>Breed :</h2> <%= text_field :pet, :breed %> </li>
+        <li><h2>Color :</h2><%= text_field :pet, :color %> </li>
+        <li><h2>Size :</h2><%= text_field :pet, :size %> </li>
+        <li><h2>Type_pet :</h2><%= text_field :pet, :type_pet %> </li>
+        <%= submit_tag("Crate Pet") %>
+        </ul>
+      <% end %>
+        <div class="botones">
+            <button  id="sube"><%=link_to "Home","/",color:"white" %></button>
+            <button  id="derecha"><%=link_to "Index","/pets",color:"white" %></button>
+                     
+        <div class="seccion">
+            <div class="home">
+             </div>
+        </div>       
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
